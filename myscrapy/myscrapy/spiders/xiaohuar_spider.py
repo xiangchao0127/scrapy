@@ -26,7 +26,7 @@ class SinaSpider(scrapy.Spider):
             if (not os.path.exists(parentFilename)):
                 os.makedirs(parentFilename)
             # 爬取所有小类
-            for j in range(0, len(subUrls)):
+            for j in range(0, len(subUrls)):  
                 item = SinanewsItem()
                 # 保存大类的title和urls
                 item['parentTitle'] = parentTitle[i]
