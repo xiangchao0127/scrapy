@@ -26,8 +26,8 @@ for i in range(len(imglist)):
     print i
     if(i%4==0 and i!=0):
         pageFile.write("\n", )  # 写入
-        time.sleep(timeMills)
-        pageFile.flush()
+        time.sleep(timeMills)  #线程等待2秒
+        pageFile.flush()    #不flush不会写入文件
     pageFile.write(imglist[i] + "     ")
 
 pageFile.close()#开了记得关
